@@ -1,0 +1,230 @@
+#content{
+    margin-top: 71px;
+}
+#part1{
+    position: relative;
+    background: url("../img/campus/bg1.jpg") center center/cover;
+}
+#part1 .title{
+    width: 280px;
+    height: 120px;
+    padding: 15% 0 0 25%;
+}
+#part1 .title .p1{
+    font-size: 40px;
+    color: #fff;
+}
+#part1 .title .p2{
+    float: right;
+    line-height: 40px;
+    font-size: 18px;
+    color: #fff;
+}
+#part1 .bot{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: rgba(255,255,255,.5);
+    line-height: 100px;
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+}
+.part .btn{
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 46px;
+    height: 46px;
+    background: url("../img/campus/a_d.png");
+    margin-left: -23px;
+    margin-top: -23px;
+    cursor: pointer;
+}
+
+#content .bg{
+    width: 100%;
+    height: 430px;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+#content .bg1{
+    background-image: url("../img/campus/bg2.jpg");
+}
+#content .bg2{
+    background-image: url("../img/campus/bg3.jpg");
+}
+#content .bg3{
+    background-image: url("../img/campus/bg4.jpg");
+}
+#content .bg4{
+    background-image: url("../img/campus/bg5.jpg");
+}
+#content .bg5{
+    background-image: url("../img/campus/bg6.jpg");
+}
+
+.part2,#part3{
+    position: relative;
+    width: 100%;
+    height: 530px;
+    background: #f0f2f5;
+}
+.part2 .wrap{
+    position: relative;
+    width: 1000px;
+    height: 100%;
+    margin: 0 auto;
+}
+.part2 .left{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 300px;
+    height: 150px;
+    margin-top: -75px;
+    color: #0080BA;
+}
+.part2 .left .p1{
+    font-size: 40px;
+}
+.part2 .left .p2,.part2 .left .p3{
+    font-size: 16px;
+    line-height: 30px;
+}
+.part2 .right{
+    position: absolute;
+    overflow: hidden;
+    right: 0;
+    width:530px;
+    height: 100%;
+}
+.part2 .right .p1,.part2 .right .p2{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: rotate(0deg) translate(0,-50%);
+}
+.part2 .right .p1 img,.part2 .right .p2 img{
+    display: block;
+}
+.part2 .right .p2{
+    right: 32px;
+    transform-origin: top center;
+    animation: round 20s linear infinite;
+}
+@keyframes round {
+    from{ transform: rotate(0deg) translate(0,-50%)}
+    to{ transform: rotate(360deg) translate(0,-50%)}
+}
+.part2 .btn,#part3 .btn{
+    top: auto;
+    bottom: -23px;
+}
+
+#part3 .p3-wrap{
+    width: 980px;
+    margin: 0 auto;
+}
+#part3 .p3-wrap .first{
+    float: right;
+    width: 237px;
+    height: 125px;
+    margin-top: 202.5px;
+    font-size: 18px;
+    color: #0080ba;
+}
+#part3 .p3-wrap .first .p1{
+    font-size: 40px;
+}
+#part3 .p3-wrap .first .p2,#part3 .p3-wrap .first .p3{
+    line-height: 26px;
+}
+#part3 .p3-wrap .second{
+    float: left;
+    position: relative;
+    width: 324px;
+    height: 324px;
+    margin-top: 103px;
+}
+#part3 .p3-wrap .second ul li{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/campus/m5.png");
+    background-size: 100% auto;
+    display: none;
+}
+#part3 .p3-wrap .second ul li.l1{
+    background-position: 0 0;
+    display: block;
+}
+#part3 .p3-wrap .second ul li.l2{
+    background-position: 0 -100%;
+}
+#part3 .p3-wrap .second ul li.l3{
+    background-position: 0 -200%;
+}
+#part3 .p3-wrap .second ul li.l4{
+    background-position: 0 -300%;
+}
+#part3 .p3-wrap .second ul li.l5{
+    background-position: 0 -400%;
+}
+#part3 .p3-wrap .second ul li.l6{
+    background-position: 0 -500%;
+}
+#part3 .p3-wrap .second ul li.l7{
+    background-position: 0 -600%;
+}
+#part3 .p3-wrap .second ul li.l8{
+    background-position: 0 -700%;
+}
+#part3 .p3-wrap .second ul li.l9{
+    background-position: 0 -800%;
+}
+#part3 .p3-wrap .third{
+    float: left;
+    width: 160px;
+    height: 333px;
+    margin: 98.5px 0 0 100px;
+}
+#part3 .p3-wrap .third ul li{
+    list-style: disc;
+    color: #b6d230;
+    font-size: 24px;
+    line-height: 35px;
+    cursor: pointer;
+}
+#part3 .p3-wrap .third ul li.active span{
+    font-size: 28px;
+}
+#part3 .p3-wrap .third ul li span{
+    color: #0080BA;
+    font-size: 20px;
+    transition: .2s linear;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
