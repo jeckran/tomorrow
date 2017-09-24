@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style type="text/css">
+	*{margin:0;padding:0;font-family:"Microsoft YaHei"}
+	ul li{
+		list-style:none;
+	}
+	#banner{
+		width:790px;
+		height:340px;
+		margin:50px auto;
+		position:relative;	
+	}
+	#banner .b-pic{
+		width:100%;
+		height:100%;
+		position:relative;
+	}
+	#banner .b-pic ul li{
+		width:100%;
+		height:100%;
+		position:absolute;
+		top:0;
+		left:0;
+		overflow:hidden;
+		display:none;
+	}
+	#banner .b-pic ul li img{
+		display:block;
+	}
+	#banner .b-tab{
+		width:144px;
+		height:18px;
+		background-color:#333;
+		background-color:rgba(255,255,255,.3);
+		text-align:center;
+		border-radius:10px;
+		position:absolute;
+		bottom:20px;
+		left:50%;
+		margin-left:-72px;
+	}
+	#banner .b-tab ul li{
+		width:12px;
+		height:12px;
+		background-color:#fff;
+		float:left;
+		border-radius:100%;
+		cursor:pointer;
+		margin:3px;
+	}
+	#banner .b-tab ul li.on{
+		background-color:#db192a;
+	}
+	#banner .b-btn{
+		display:none;
+	}
+	#banner:hover .b-btn{
+		display:block;
+	}
+	#banner .b-btn div:hover{
+		background-color:rgba(0,0,0,.5);
+	}
+	#banner .b-btn div{
+		width:32px;
+		height:57px;
+		background-color:#000;
+		background-color:rgba(0,0,0,.2);
+		color:#fff;
+		line-height:57px;
+		text-align:center;
+		font-size:18px;
+		top:50%;
+		position:absolute;
+		margin-top:-28px;
+		cursor:pointer;
+	}
+	#banner .b-btn div#left{
+		left:0;
+	}
+	#banner .b-btn div#right{
+		right:0;
+	}
+  </style>
+ </head>
+ <body>
+  <div id="banner">
+	<div class="b-pic">
+		<ul>
+			<li><a href="javascrip:"><img src="images/1.jpg" alt="" /></a></li>
+			<li><a href="javascrip:"><img src="images/2.jpg" alt="" /></a></li>
+			<li><a href="javascrip:"><img src="images/3.jpg" alt="" /></a></li>
+			<li><a href="javascrip:"><img src="images/4.jpg" alt="" /></a></li>
+			<li><a href="javascrip:"><img src="images/5.jpg" alt="" /></a></li>
+			<li><a href="javascrip:"><img src="images/6.jpg" alt="" /></a></li>
+			<li><a href="javascrip:"><img src="images/7.jpg" alt="" /></a></li>
+			<li><a href="javascrip:"><img src="images/8.jpg" alt="" /></a></li>
+		</ul>
+	</div>
+	<div class="b-tab">
+		<ul>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+	<div class="b-btn" onselectstart="return false">
+		<div id="left">&lt</div>
+		<div id="right">&gt</div>
+	</div>
+  </div>
+  <script type="text/javascript" src="js/jquery-1.12.1-jquery.min.js"></script>
+  <script type="text/javascript">
+	$(function(){
+		//元素的获取，不用每次都请求
+		var $pic = $("#banner .b-pic ul li");
+		var $tab = $('#banner .b-tab ul li');
+		var $btn = $('#banner .b-btn div');
+		var length = $pic.length;//个数，后面很多地方会用到
+		var index = 0;
+		var delTimer = null;//延迟执行
+		var clickTime = new Date();//点击时间记录，在小于某个时间内点击无效
+		var outoTimer = null;//自动轮播定时器
+		//初始化，显示第一张图片，给第一个tab加class
+		$pic.eq(0).show();
+		$tab.eq(0).addClass('on');
+		//鼠标滑动事件
+		$tab.mouseenter(function(){
+			clearTimeout(delTimer);
+			delTimer=setTimeout(function(){
+				change(function(){
+					index = $(this).index();
+				}.bind(this));
+			}.bind(this),200);			
+		});
+
+		//点击左右按钮实现图片切换
+		$btn.click(function () {
+			if (new Date() - clickTime >500){
+				var i = $(this).index();
+				change(function () {
+					if (i){
+						index ++;
+						index %= length;
+					}else{
+						index --;
+						if(index<0)index=length-1;
+					};
+				});
+				clickTime = new Date();
+			};
+        });
+		//自动轮播及定时器的清除
+		auto();
+		$('#banner').hover(function(){
+			clearInterval(outoTimer);
+		},auto);
+		function auto(){
+			outoTimer = setInterval(function(){
+				change(function(){
+					index++;
+					index %= length;
+				});			
+			},3000);
+		};
+
+		//变化函数
+		function change(fn){
+			$pic.eq(index).stop().fadeOut(500);
+			$tab.eq(index).removeClass('on');
+			fn&&fn();
+			$pic.eq(index).stop().fadeIn(500);
+			$tab.eq(index).addClass('on');
+			
+		};
+	});
+
+  </script>
+ </body>
+</html>
