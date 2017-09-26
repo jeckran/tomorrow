@@ -23,9 +23,12 @@ a{
 img{
     border:none;
 }
+<<<<<<< HEAD
 a img{
     display: block;
 }
+=======
+>>>>>>> a5236c114a2b771a1046a91a7e254913ec9afef9
 ol,ul,li {
     list-style:none;
 }

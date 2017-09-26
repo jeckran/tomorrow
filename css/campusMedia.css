@@ -1,0 +1,205 @@
+
+/*900 ~ 1200*/
+@media all and (max-width: 1200px) and (min-width: 900px){
+    .part2 .wrap{
+        width: 840px;
+    }
+    #part3 .p3-wrap{
+        width: 825px;
+    }
+}
+
+/*0 ~ 900*/
+@media all and (max-width: 900px){
+    #content{
+        margin-top: 106px;
+    }
+    #content .bg{
+        background-attachment: scroll;
+    }
+    #part1 .bot .btn{
+        display: none;
+    }
+    .part .btn{
+        display: none;
+    }
+    #content .bg{
+        height: 300px;
+    }
+
+    .part2 .wrap{
+        width: 100%;
+    }
+    .part2 .left{
+        position: static;
+        margin: 0 auto;
+        padding-top: 20px;
+        text-align: center;
+    }
+    .part2 .right{
+        position: relative;
+        width: 400px;
+        height: 343px;
+        margin: 0 auto;
+    }
+
+    .part2 .right .p2{
+        right: 27px;
+    }
+    .part2 .right .p1 img{
+        width: 400px;
+        height: 265px;
+    }
+    .part2 .right .p2 img{
+        width: 350px;
+        height: 327px;
+    }
+    #part3 .p3-wrap .first{
+        float: none;
+        margin: 0 auto;
+        padding-top: 30px;
+    }
+    #part3 .p3-wrap .second{
+        margin-top: 0;
+    }
+    #part3 .p3-wrap .third{
+        margin-top: 0;
+    }
+}
+
+/*600 ~ 900*/
+@media all and (max-width: 900px) and (min-width: 600px){
+    #part1 .title{
+        width: 200px;
+        height: 120px;
+        padding: 10% 0 0 20%;
+    }
+    #part1 .title .p1{
+        font-size: 30px;
+    }
+    #part1 .title .p2{
+        font-size: 16px;
+    }
+    #part1 .bot{
+        height: 50px;
+        line-height: 50px;
+        font-size: 12px;
+    }
+    #part3 .p3-wrap{
+        width: 600px;
+    }
+}
+
+/*0 ~ 600*/
+@media all and (max-width: 600px){
+    #part1 .title{
+        width: 150px;
+        height: 70px;
+        padding: 10% 0 0 20%;
+    }
+    #part1 .title .p1{
+        font-size: 24px;
+    }
+    #part1 .title .p2{
+        line-height: 20px;
+        font-size: 12px;
+    }
+    #part1 .bot{
+        height: 40px;
+        line-height: 40px;
+        font-size: 12px;
+    }
+    .part2 .left{
+        height: 100px;
+    }
+    .part2 .left .p1{
+        font-size: 24px;
+    }
+    .part2 .left .p2{
+        font-size: 14px;
+    }
+    .part2 .left .p3{
+        font-size: 14px;
+    }
+    .part2 .right{
+        width: 300px;
+        height: 270px;
+    }
+    .part2 .right .p1 img{
+        width: 300px;
+        height: 200px;
+    }
+    .part2 .right .p2{
+        right: 14px;
+    }
+    .part2 .right .p2 img{
+        width: 270px;
+        height: 253px;
+    }
+    #part3{
+        height: 650px;
+    }
+    #part3 .p3-wrap{
+        width: 100%;
+    }
+    #part3 .p3-wrap .first{
+        text-align: center;
+        font-size: 14px;
+    }
+    #part3 .p3-wrap .first .p1{
+        font-size: 24px;
+    }
+    #part3 .p3-wrap .second{
+        float: none;
+        width: 280px;
+        height: 280px;
+        margin: 0 auto;
+    }
+    #part3 .p3-wrap .third{
+        float: none;
+        width: 300px;
+        height: 100px;
+        margin: 25px auto 0;
+    }
+    #part3 .p3-wrap .third ul li{
+        float: left;
+        margin: 0 18px;
+    }
+    #part3 .p3-wrap .third ul li.active span{
+        font-size: 16px;
+        color: #b6d230 !important;
+    }
+    #part3 .p3-wrap .third ul li span{
+        font-size: 16px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

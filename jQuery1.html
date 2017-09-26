@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style type="text/css">
+	#box{
+		width:100px;
+		height:100px;
+		background:red;
+	}
+  </style>
+ </head>
+ <body>
+  <div id='box'></div>
+  <script src="https://cdn.bootcss.com/jquery/1.12.1/jquery.js"></script>
+  <script type="text/javascript">
+	//console.log(jQuery)  //验证jQuery是否引入成功
+	//$('#box').css('background','yellow')//jQuery获取的元素只能用jQuery的方法，但是jQuery与原生js之间是可以相互转换的
+
+
+	//$('#box').css({background:'yellow',borderRadius:'50%',width:'200px',height:'200px'})//jQuery里.css()可以传两个参数属性和属性值，也可以传一个参数json
+
+
+	//alert($('#box').css('background'));//.css()中只传一个参数代表获取某个属性值
+  </script>
+ </body>
+</html>

@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style type="text/css">
+	#box{
+		
+	}
+  </style>
+ </head>
+ <body>
+  <div id='box'>
+	<a href="javascript:">000</a>
+	<p>111</p>
+	<p>222</p>
+	<p>333</p>
+	<p>444</p>
+	<p>555</p>
+  </div>
+  <script src="https://cdn.bootcss.com/jquery/1.12.1/jquery.js"></script>
+  <!-- <script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>  -->
+  <script type="text/javascript">
+	//$('#box p').css('color','red')  //jQuery 默认遍历，直接加样式会加上所有
+
+	/*$('#box p').each(function(a){//a代表的是索引值
+		//alert(a)
+		//console.log(this);//this指的是js对象，不能用jQuery的API
+		if (a===0)
+		{
+			//this.css('color','red');  //使用jQuery的ＡＰＩ会报错
+			this.style.color = 'red';
+		}else{
+			this.style.color = 'yellow'
+		};
+	});*/
+
+//jQuery 转原生js
+	//方法1：就是在jQuery对象和面加[n]
+	    //$('#box p')[2].style.color = 'pink';
+	//方法2.get()
+	    //$('#box p').get(3).style.color = 'yellow';
+
+
+//js转jQuery
+	//var op = document.getElementById('box').getElementsByTagName('p');
+	//$(op).css('color','green'); //直接将节点放在$()里就转换成jQUery对象了
+	 
+		
+//jQuery的核心功能
+	//$("#box p").eq(3).css({color:'red'})  //.eq(n)筛选出第几个
+	//alert($('#box p').size())  //返回对象的长度与length的作用相同，在jQuery3.0以上版本中已经取消.size()方法
+	//alert($('#box p').length);  //与.size()相同
+
+
+//jQuery里的事件函数
+	//$('#box p').click(function(){alert(1)});
+
+//.index()索引值是相对于父元素的,括号里可以传参,从而显示本身的序列号
+	$('#box p').click(function(){
+		var index = $(this).index('#box p');//括号里是传参不是传$('#box p')
+		alert(index)
+	});
+
+	
+  </script>
+ </body>
+</html>
